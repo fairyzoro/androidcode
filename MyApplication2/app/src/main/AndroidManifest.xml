@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sandroid.aa.app" >
+    package="com.sandroid.myapplication2.app" >
 
     <application
         android:allowBackup="true"

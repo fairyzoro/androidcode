@@ -1,4 +1,4 @@
-package com.sandroid.aa.app;
+package com.sandroid.myapplication2.app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

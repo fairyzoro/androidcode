@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+              android:orientation="vertical"
+                tools:context=".MainActivity">
+
+
+    <Button
+            android:id="@+id/id_btn_access_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAccessNet"
+            android:text="访问网络"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnGetJson"
+            android:text="获取json数据"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnGetImage"
+            android:text="使用ImageRequest获取网络图片"
+            />
+
+
+
+
+    <ImageView
+            android:id="@+id/id_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+</LinearLayout>

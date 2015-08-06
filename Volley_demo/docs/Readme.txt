@@ -22,6 +22,7 @@
     activity_main.xml
     NetworkSingleton.java       //imageloader的单例
     adapters/PictureAdapter.java    //listView的adapter
+    adapters/PictureNetViewAdapter.java     //NetworkImageView用的adapter ！！！！！！！
     AndroidManifrest.xml        //权限的添加
 
     NetViewActivity.java       //NetworkImageView

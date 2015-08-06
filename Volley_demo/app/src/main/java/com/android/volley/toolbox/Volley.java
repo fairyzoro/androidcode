@@ -22,6 +22,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.http.AndroidHttpClient;
 import android.os.Build;
 
+import android.os.Environment;
 import com.android.volley.Network;
 import com.android.volley.RequestQueue;
 
@@ -41,6 +42,12 @@ public class Volley {
      */
     public static RequestQueue newRequestQueue(Context context, HttpStack stack) {
         File cacheDir = new File(context.getCacheDir(), DEFAULT_CACHE_DIR);
+
+        String state = Environment.getExternalStorageState();
+        if (state.equals(Environment.MEDIA_MOUNTED)) {
+            // 外部存储路径
+            cacheDir = context.getExternalCacheDir();
+        }
 
         String userAgent = "volley/0";
         try {

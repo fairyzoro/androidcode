@@ -36,5 +36,19 @@
  注意：
     1 网络权限的添加
 
+
+==========================
+将 内部存储缓存 改为SDCard 缓存
+改动源码文件：java\com\android\volley\toolbox
+进入流程：单例文件NetWorkSingleton中，点入Volley.newRequestQueue(context)，点入return newRequestQueue(context, null);
+可以看到File cacheDir = new File(context.getCacheDir(), DEFAULT_CACHE_DIR);
+改为：
+  File cacheDir = new File(context.getCacheDir(), DEFAULT_CACHE_DIR);
+
+        String state = Environment.getExternalStorageState();
+        if (state.equals(Environment.MEDIA_MOUNTED)) {
+            // 外部存储路径
+            cacheDir = context.getExternalCacheDir();
+        }
 ==========================
 程序已运行，无错，如果有错，应该是定义消息是有几个ErrorListener未捕获

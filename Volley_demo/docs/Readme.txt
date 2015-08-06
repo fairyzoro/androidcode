@@ -3,6 +3,12 @@
 以及内存存储区，默认不会缓存到SDCard上，简单改源码便可实现，此例没实现，
 在下个例子NetworkImageView使用中实现。
 ==========================
+大致程序流程：
+    1、ListView设置adapter
+    2、adapter要加载资源，就要在里面用到Requestqueue 和 ImageLoader
+    3、官方推荐用单例，因此 Requestqueue 和 ImageLoader 的设置就写在了单例里，adapter只获取就行
+    4、在程序的开始的地方调用create单例
+==========================
 导入Volley
  1 src main java 下面新建package “com.android.volley”
  2 去sdk目录下，D:\sdk\android-sdk-windows\sources\android-22\com\android\volley

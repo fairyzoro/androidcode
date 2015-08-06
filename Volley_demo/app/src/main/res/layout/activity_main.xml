@@ -14,16 +14,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="此页面用的ImageLoader"
-                />
+
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="btnNetImgView"
-                android:text="点击查看NetworkImageView功能调用"
+                android:text="Volley-NetworkImageView"
+                />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnVolleyJson"
+                android:text="Volley-Json"
                 />
     </LinearLayout>
 

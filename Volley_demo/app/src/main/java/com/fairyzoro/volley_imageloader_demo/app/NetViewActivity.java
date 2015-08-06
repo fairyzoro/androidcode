@@ -1,25 +1,23 @@
 package com.fairyzoro.volley_imageloader_demo.app;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import com.fairyzoro.volley_imageloader_demo.app.adapters.PictureAdapter;
+import com.fairyzoro.volley_imageloader_demo.app.adapters.PictureNetViewAdapter;
 
 import java.util.LinkedList;
 
 
-public class MainActivity extends ActionBarActivity {
+public class NetViewActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_netview);
 
-        // 网络单例，创建RequestQueue 和 ImageLoader
-        // 放到程序启动的最前端 MainApplication
-//        NetworkSingleton.createInstance(getApplicationContext());
 
         ListView listView = (ListView) findViewById(R.id.id_listView_pic);
 
@@ -40,19 +38,8 @@ public class MainActivity extends ActionBarActivity {
             urls.add("http://static.cnbetacdn.com/newsimg/110510/06572811161499476.jpg");
 
 
-            listView.setAdapter(new PictureAdapter(this,urls));
+            listView.setAdapter(new PictureNetViewAdapter(this,urls));
         }
-
-    }
-
-    public void btnNetImgView(View view) {
-        Intent intent = new Intent(MainActivity.this,
-                NetViewActivity.class);
-
-        startActivity(intent);
-    }
-
-    public void btnVolleyJson(View view) {
 
     }
 }

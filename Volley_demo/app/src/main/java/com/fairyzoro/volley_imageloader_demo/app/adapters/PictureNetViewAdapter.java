@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
 import com.fairyzoro.volley_imageloader_demo.app.NetworkSingleton;
 
 import java.util.List;
@@ -15,12 +16,12 @@ import java.util.List;
 /**
  * Created by Administrator on 2015/8/6.
  */
-public class PictureAdapter extends BaseAdapter{
+public class PictureNetViewAdapter extends BaseAdapter{
 
     private Context context;
     private List<String> pictures;  //存的网址
 
-    public PictureAdapter(Context context, List<String> pictures) {
+    public PictureNetViewAdapter(Context context, List<String> pictures) {
         this.context = context;
         this.pictures = pictures;
     }
@@ -47,17 +48,30 @@ public class PictureAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView ret = null;
+
+        // !!!!!!!!!    NetworkImageView  !!!!!!!!!!!
+        NetworkImageView ret = null;
         if (convertView != null) {
-            ret = (ImageView)convertView;
+            ret = (NetworkImageView)convertView;
         }else {
-            ret = new ImageView(context);
+            ret = new NetworkImageView(context);
         }
 
         String url = pictures.get(position);
 
+//        ret.setDefaultImageResId();
+//        ret.setErrorImageResId();
+
         //------ ImageLoader 来加载图片
         ImageLoader imageLoader = NetworkSingleton.getInstance().getImageLoader();
+
+        //如果使用NetworkImageView 这种加载的方式，
+        //只要设置ImageUrl，并且制定ImageLoader，
+        //就能够自动的下载图片了
+        ret.setImageUrl(url,imageLoader);   //！！！！！！！！！！
+
+
+/*
 
         final  ImageView img = ret;
 
@@ -87,7 +101,7 @@ public class PictureAdapter extends BaseAdapter{
                 256,
                 128
         );
-
+*/
 
         return ret;
     }

@@ -10,3 +10,7 @@ setOnRefresh（this）   手动在文件上面添加implements
 xml文件应该看看,里面有ptr
 
 ！！！！！ 至于 PullToRefresh 怎么加入到工程里,暂时不知道怎么在github上写图文教程
+
+=========
+环境：idea14 + Gradle
+程序正常运行

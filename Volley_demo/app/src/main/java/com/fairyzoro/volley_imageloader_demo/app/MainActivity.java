@@ -53,6 +53,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void btnVolleyJson(View view) {
-
+        Intent intent = new Intent(this, VolleyJsonActivity.class);
+        startActivity(intent);
     }
 }

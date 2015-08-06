@@ -20,9 +20,13 @@
  文件列表：
     MainActivity.java
     activity_main.xml
-    NetworkSingleton.java       imageloader的单例
-    adapters/PictureAdapter.java    listView的adapter
-    AndroidManifrest.xml  权限的添加
+    NetworkSingleton.java       //imageloader的单例
+    adapters/PictureAdapter.java    //listView的adapter
+    AndroidManifrest.xml        //权限的添加
+
+    NetViewActivity.java       //NetworkImageView
+    VolleyJsonActivity         //Volley的POST用法，
+        这个只是简单记录，POST的写法并没写完整；POST还是交给xUtils做吧
  =========================
  命令列表：
     单例格式进文件看

@@ -78,7 +78,7 @@ public class MainActivity extends ActionBarActivity implements SlidingMenu.OnOpe
     public void onOpened() {
         // 跟业务逻辑相关的
         if (menu.isSecondaryMenuShowing()){
-            setTitle("个人中心");
+            setTitle("个人中心");   //------ 都忘了居然可以这么玩
         }else if (menu.isMenuShowing()){
             setTitle("菜单");
         }

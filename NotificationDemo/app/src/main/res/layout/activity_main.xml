@@ -1,0 +1,53 @@
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+          android:orientation="vertical"
+                tools:context=".MainActivity">
+
+    <TextView
+            android:text="@string/hello_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnShowNotification"
+            android:text="显示普通的通知"
+            />
+
+    <!-- 复杂的通知显示：1 数量显示， 2 声音提醒 -->
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnShowSoundNotification"
+            android:text="带声音数量的通知"
+            />
+
+    <!-- 创建不能够删掉的通知 -->
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnShowGoing"
+            android:text="运行中的通知"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnShowDetailNotification"
+            android:text="带点击的通知"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnDown"
+            android:text="动态演示下载通知"
+            />
+</LinearLayout>

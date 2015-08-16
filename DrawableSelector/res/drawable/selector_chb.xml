@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- item 标签 -->
+
+    <item
+            android:state_checked="true"
+            android:drawable="@drawable/ic_action_favorite"/>
+
+    <!-- 默认 item 不写任何状态的，通用的图片 -->
+
+    <item
+            android:drawable="@drawable/ic_action_good"/>
+
+</selector>

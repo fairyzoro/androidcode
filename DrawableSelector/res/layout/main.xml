@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#ff4583ff"
+        >
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello World, MainActivity"
+            />
+
+    <!-- 带有图片选择器的 CheckBox
+
+        CheckBox 有一个 button 属性 可以替换默认对勾的图片
+
+     -->
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_chb"
+            android:checked="true"
+            android:text="收藏"
+            />
+
+</LinearLayout>
+

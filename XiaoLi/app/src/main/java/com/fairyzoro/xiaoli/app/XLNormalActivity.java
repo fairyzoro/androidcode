@@ -56,9 +56,9 @@ public class XLNormalActivity extends XLBaseActivity {
         body = new View(this);
     }
     // 返回按钮的显示状态
-    public void setreturnbtnVisuale(boolean value) {
+    public void setReturnBtnVisuale(boolean value) {
     }
-    public boolean getReturnbtnVisuable() {
+    public boolean getReturnBtnVisuable() {
         return true;
     }
     // 标题信息

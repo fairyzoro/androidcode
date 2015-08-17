@@ -4,7 +4,6 @@ package com.fairyzoro.xiaoli.app.data;
  * Created by Administrator on 2015/8/17.
  */
 
-// SD的读写权限还没添加
 
 import android.os.Handler;
 import android.os.Message;
@@ -89,7 +88,7 @@ username	否	用户昵称，如为空用手机号代替
 
 
     // 用户注册
-    public int rgistUser(String phone, String passwd, String username) {
+    public int registUser(String phone, String passwd, String username) {
         int ret = 0;
         // TODO 打开连接，执行定义的接口
         return ret;

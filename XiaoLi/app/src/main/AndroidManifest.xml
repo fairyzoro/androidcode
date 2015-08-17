@@ -22,10 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".XLBaseActivity" />
-        <activity
-            android:name=".CSActivity"
-            android:label="@string/title_activity_cs" >
-        </activity>
+
         <activity
             android:name=".XLNormalActivity"
             android:label="@string/title_activity_xlnormal" >

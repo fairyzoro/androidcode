@@ -1,16 +1,15 @@
 package com.fairyzoro.xiaoli.app.userface;
 
+import android.content.Context;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.*;
 import com.fairyzoro.xiaoli.app.R;
+import com.fairyzoro.xiaoli.app.XLDialog;
 import com.fairyzoro.xiaoli.app.XLNormalActivity;
 
 
@@ -23,7 +22,7 @@ public class XLLoginActivity extends XLNormalActivity {
     public TextView forgetpass;
     public Handler handler;
 
-    // 初始化主题
+    // 初始化主体内容
     public void InitBody() {
         LinearLayout l = new LinearLayout(this);
         // 加载xml文件或者代码生成
@@ -37,7 +36,18 @@ public class XLLoginActivity extends XLNormalActivity {
                         passwd.getEditableText().toString());
             }
         });
+        XLDialog dlg =
+                new XLDialog(XLLoginActivity.class,
+                        new DialogLayout(XLLoginActivity.this));
     }
+
+    // DialogLayout 二级人脉那里能用的到对话框
+    public class DialogLayout extends FrameLayout {
+        public DialogLayout(Context context) {
+            super(context);
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

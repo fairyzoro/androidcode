@@ -35,6 +35,7 @@ public class XLLoginActivity extends XLNormalActivity {
                         phone.getEditableText().toString(),
                         passwd.getEditableText().toString());
             }
+
         });
         XLDialog dlg =
                 new XLDialog(XLLoginActivity.class,

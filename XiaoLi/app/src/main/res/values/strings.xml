@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">XiaoLi</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cs">CSActivity</string>
+    <string name="title_activity_xlnormal">XLNormalActivity</string>
+    <string name="title_activity_xllogin">XLLoginActivity</string>
+</resources>
